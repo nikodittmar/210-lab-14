@@ -33,9 +33,9 @@ public:
 
     // Other methods.
     void print() {
-        cout << setw(8) << "Red: " << red;
-        cout << setw(8) << "Green: " << green;
-        cout << setw(8) << "Blue: " << blue;
+        cout << setw(8) << "Red: " << setw(4) << red << " | ";
+        cout << setw(8) << "Green: " << setw(4) << green << " | ";
+        cout << setw(8) << "Blue: " << setw(4) << blue << " | ";
         cout << "\n";
     }
 };
@@ -52,19 +52,27 @@ int main() {
     orange.setBlue(0);
 
     Color gray;
-    gray.setRed(128);
-    gray.setGreen(128);
-    gray.setBlue(128);
+    gray.setRed(156);
+    gray.setGreen(156);
+    gray.setBlue(156);
+
+    Color lime;
+    lime.setRed(50);
+    lime.setGreen(205);
+    lime.setBlue(50);
 
 
-    cout << "Teal: \n";
+    cout << setw(15) << "Teal: |";
     teal.print();
 
-    cout << "Orange: \n";
+    cout << setw(15) << "Orange: |";
     orange.print();
 
-    cout << "Gray: \n";
+    cout << setw(15) << "Gray: |";
     gray.print();
+
+    cout << setw(15) << "Lime: |";
+    lime.print();
 
     return 0;
 }
