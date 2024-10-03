@@ -38,28 +38,36 @@ public:
         cout << setw(8) << "Blue: " << setw(4) << blue << " | ";
         cout << "\n";
     }
+
+    // Default constructor, white color.
+    Color() {
+        red = 255;
+        green = 255;
+        blue = 255;
+    }
+
+    // Parameter constructor.
+    Color(int r, int g, int b) {
+        red = r;
+        green = g;
+        blue = b;
+    }
+
+    // Partial constructor.
+    Color(int r) {
+        red = r;
+        green = 0;
+        blue = 0;
+    }
 };
 
 int main() {
-    Color teal; 
-    teal.setRed(0);
-    teal.setGreen(128);
-    teal.setBlue(128);
-
-    Color orange;
-    orange.setRed(255);
-    orange.setGreen(165);
-    orange.setBlue(0);
-
-    Color gray;
-    gray.setRed(156);
-    gray.setGreen(156);
-    gray.setBlue(156);
-
-    Color lime;
-    lime.setRed(50);
-    lime.setGreen(205);
-    lime.setBlue(50);
+    Color teal(0, 128, 128); 
+    Color orange(265, 165, 0);
+    Color gray(156, 156, 156);
+    Color lime(50, 205, 50);
+    Color red(200);
+    Color white;
 
 
     cout << setw(15) << "Teal: |";
@@ -73,6 +81,12 @@ int main() {
 
     cout << setw(15) << "Lime: |";
     lime.print();
+
+    cout << setw(15) << "Red: |";
+    red.print();
+
+    cout << setw(15) << "White: |";
+    white.print();
 
     return 0;
 }
